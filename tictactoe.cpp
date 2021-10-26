@@ -19,6 +19,7 @@ void display_board() {
     cout << "     |     |     \n";
     cout << "  " << board[2][0] << "  |  " << board[2][1] << "  |  " << board[2][2] << "  \n";
     cout << "     |     |     \n";
+    cout << "\n";
 }
 
 void player_turn() {
@@ -79,9 +80,9 @@ int main() {
         player_turn();
         game_over();
     }
-    if (turn == 'X' && draw == false) {
+    if (turn == 'O' && draw == false) {
         cout << "PLAYER ONE ELIMINATES PLAYER TWO\n";
-    } else if (turn == 'O' && draw == false) {
+    } else if (turn == 'X' && draw == false) {
         cout << "PLAYER TWO ELIMINATES PLAYER ONE\n";
     } else {
         cout << "BOTH PLAYERS ELIMINATED\n";

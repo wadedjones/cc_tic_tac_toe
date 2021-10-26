@@ -72,6 +72,18 @@ bool game_over() {
 
 int main() {
 
-    display_board();
-    player_turn();
+    cout << "WELCOME TO TIC TAC HELL\n";
+
+    while(game_over()) {
+        display_board();
+        player_turn();
+        game_over();
+    }
+    if (turn == 'X' && draw == false) {
+        cout << "PLAYER ONE ELIMINATES PLAYER TWO\n";
+    } else if (turn == 'O' && draw == false) {
+        cout << "PLAYER TWO ELIMINATES PLAYER ONE\n";
+    } else {
+        cout << "BOTH PLAYERS ELIMINATED\n";
+    }
 }
